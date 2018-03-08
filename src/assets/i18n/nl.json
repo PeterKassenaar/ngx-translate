@@ -1,0 +1,8 @@
+{
+  "homepage": {
+	"title"   : "Welkom bij ng2-translate",
+	"bodyText": "ng2-translate is de opvolger van de AngularJS-directive ng-translate",
+	"okButton": "Prima zo",
+	"changeLanguage": "Taal wijzigen"
+  }
+}
