@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.translate.addLangs(['en', 'nl']);
+		this.translate.addLangs(['en', 'nl', 'fr']);
 		this.translate.setDefaultLang('en');
 		this.translate.use('en');
 	}

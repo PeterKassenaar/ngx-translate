@@ -1,0 +1,8 @@
+{
+  "homepage": {
+	"title"   : "Bienvenue sur ng2-translate",
+	"bodyText": "ng2-translate est le successeur de la directive AngularJS ng-translate",
+	"okButton": "C'est bien",
+	"changeLanguage": "Changer la langue"
+  }
+}
