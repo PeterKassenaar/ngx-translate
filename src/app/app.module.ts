@@ -1,33 +1,31 @@
-// Basic angular stuff
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {Http} from '@angular/http';
-
-// Translation Stuff
-import {TranslateModule} from 'ng2-translate/ng2-translate';
-import {TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
+import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-
-export function createTranslateLoader(http: Http) {
-	return new TranslateStaticLoader(http, 'assets/i18n', '.json');
-}
-
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
 @NgModule({
-	declarations: [
-		AppComponent
-	],
-	imports     : [
-		BrowserModule,
-		TranslateModule.forRoot({
-			provide   : TranslateLoader,
-			useFactory: (createTranslateLoader),
-			deps      : [Http]
-		})
-	],
-	providers   : [],
-	bootstrap   : [AppComponent]
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
+}
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader((http))
 }

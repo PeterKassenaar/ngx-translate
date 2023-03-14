@@ -1,20 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {TranslateService} from 'ng2-translate/ng2-translate';
+import {Component} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
-	selector   : 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls  : ['./app.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+  title: string = 'ngx-translate-demo';
+  url: string = 'https://www.codeandweb.com/babeledit';
 
-	constructor(public translate: TranslateService) {
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('nl');
+    translate.use('nl')
+  }
 
-	}
-
-	ngOnInit() {
-		this.translate.addLangs(['en', 'nl', 'fr']);
-		this.translate.setDefaultLang('en');
-		this.translate.use('en');
-	}
+  useLanguage(language: string): void {
+    this.translate.use(language)
+  }
 }

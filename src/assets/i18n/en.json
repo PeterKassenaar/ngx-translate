@@ -1,8 +1,12 @@
 {
-  "homepage": {
-	"title"   : "Welcome to ng2-translate",
-	"bodyText": "Ng2-translate is the successor of AngularJS first ng-translate directive",
-	"okButton": "OK",
-	"changeLanguage": "change language"
-  }
+	"content": {
+		"menu": "This is the menu"
+	},
+	"demo": {
+		"footer": "Copyright (C) - Peter Kassenaar, 2023 - all rights reserved.",
+		"heading": "Demo ngx-translate (translations)",
+		"text": "This application shows how an Angular App can be easily translated with ngx-translate.",
+		"url": "To synchronize the translations, the BabelEdit tool was used, available at"
+	},
+	"title": "This is the title of the application"
 }
