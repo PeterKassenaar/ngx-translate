@@ -13,6 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - See `app.component.html` on how to use the `| translate` pipe in your templates.
 - Very simple app, not using translation parameters.
 - This example is created with `Angular 14`, but the principles are the same for newer versions of Angular.
+  - Note: newer versions of Angular require a newer version of `ngx-translate`, due to the usage of standalone components!
 
 ## Development server
 
