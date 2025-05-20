@@ -11,7 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Translations are synchronized using BabelEdit, available at https://www.codeandweb.com/babeledit/download/4.0.3/win-64
   , or for your operating system. This is a paid tool, but there is a 7-day trial available.
 - See `app.component.html` on how to use the `| translate` pipe in your templates.
-- Very simple app, not using translation parameters
+- Very simple app, not using translation parameters.
+- This example is created with `Angular 14`, but the principles are the same for newer versions of Angular.
 
 ## Development server
 
